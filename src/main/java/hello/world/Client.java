@@ -1,9 +1,8 @@
 package hello.world;
 
 import hello.world.workflows.HelloWorld;
-        import io.infinitic.pulsar.InfiniticClient;
-
-        import javax.annotation.Nullable;
+import io.infinitic.pulsar.InfiniticClient;
+import javax.annotation.Nullable;
 
 public class Client {
     public static void main(String[] args) {

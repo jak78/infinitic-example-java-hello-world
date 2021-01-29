@@ -7,15 +7,19 @@ plugins {
 }
 
 repositories {
-    maven { url = "http://oss.sonatype.org/content/repositories/snapshots" }
     mavenCentral()
     jcenter()
 }
 
 dependencies {
     implementation "org.slf4j:slf4j-simple:1.7.+"
-    implementation "io.infinitic:infinitic-pulsar:0.1.0-SNAPSHOT"
-    implementation "io.infinitic:infinitic-client:0.1.0-SNAPSHOT"
+    implementation "io.infinitic:infinitic-pulsar:0.1.0"
+    implementation "io.infinitic:infinitic-client:0.1.0"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 application {

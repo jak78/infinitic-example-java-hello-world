@@ -10,7 +10,7 @@ public class HelloWorldImpl extends AbstractWorkflow implements HelloWorld {
     public String greet(String name) {
         String str = helloWorldService.sayHello(name);
         String greeting =  helloWorldService.addEnthusiasm(str);
-        System.out.println(greeting);
+        inline(() -> { System.out.println(greeting); return null; });
 
         return greeting;
     }
