@@ -4,7 +4,7 @@ import hello.world.tasks.HelloWorldService;
 import io.infinitic.workflows.Workflow;
 
 public class HelloWorldImpl extends Workflow implements HelloWorld {
-    private final HelloWorldService helloWorldService = task(HelloWorldService.class);
+    private final HelloWorldService helloWorldService = newTask(HelloWorldService.class);
 
     @Override
     public String greet(String name) {
