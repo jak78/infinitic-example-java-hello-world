@@ -1,6 +1,8 @@
 package hello.world.tasks;
 
-public class HelloWorldServiceImpl implements HelloWorldService {
+import io.infinitic.tasks.Task;
+
+public class HelloWorldServiceImpl extends Task implements HelloWorldService {
     @Override
     public String sayHello(String name) {
 
@@ -11,10 +13,5 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String addEnthusiasm(String str) {
 
         return str + "!";
-    }
-
-    public Float getRetryDelay() {
-
-        return 5F;
     }
 }
