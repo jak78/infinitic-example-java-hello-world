@@ -1,18 +1,18 @@
 package hello.world;
 
-import io.infinitic.pulsar.InfiniticAdmin;
+import io.infinitic.pulsar.PulsarInfiniticAdmin;
 import org.apache.pulsar.client.admin.PulsarAdmin;
 import org.apache.pulsar.client.api.PulsarClientException;
 
 public class Setup {
     public static void main(String[] args) throws PulsarClientException {
-        PulsarAdmin pulsarAdmin = PulsarAdmin
+        PulsarAdmin admin = PulsarAdmin
                 .builder()
                 .serviceHttpUrl("http://localhost:8080")
                 .build();
 
-        InfiniticAdmin infiniticAdmin = new InfiniticAdmin(
-                pulsarAdmin,
+        PulsarInfiniticAdmin infiniticAdmin = new PulsarInfiniticAdmin(
+                admin,
                 "infinitic",
                 "dev",
                 null

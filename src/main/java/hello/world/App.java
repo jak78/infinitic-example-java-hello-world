@@ -1,9 +1,10 @@
 package hello.world;
 
-import io.infinitic.pulsar.InfiniticWorker;
+
+import io.infinitic.pulsar.PulsarInfiniticWorker;
 
 public class App {
     public static void main(String[] args) {
-        InfiniticWorker.fromConfigFile("infinitic.yml").start();
+        PulsarInfiniticWorker.fromConfigFile("infinitic.yml").start();
     }
 }
