@@ -13,7 +13,7 @@ public class Client {
         HelloWorld helloWorld = client.newWorkflow(HelloWorld.class);
 
         // asynchronous dispatch of a workflow
-        client.async(helloWorld, w -> w.greet("async " + name));
+        client.async(helloWorld, w -> w.greet(name));
 
         System.out.println("workflow " + HelloWorld.class.getName() + " dispatched!");
     }
