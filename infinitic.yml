@@ -10,7 +10,7 @@ redis:
 pulsar:
   serviceUrl: pulsar://localhost:6650
   tenant: infinitic
-  namespace: dev2
+  namespace: dev
 
 tasks:
   - name: hello.world.tasks.HelloWorldService
@@ -19,3 +19,6 @@ tasks:
 workflows:
   - name: hello.world.workflows.HelloWorld
     class: hello.world.workflows.HelloWorldImpl
+
+port: 9080
+debug: false
