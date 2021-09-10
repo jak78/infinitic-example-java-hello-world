@@ -8,12 +8,11 @@ The workflow `HelloWorld` takes a `name` string as input and return `"Hello $nam
 This repository is described in the Infinitic documentation: https://docs.infinitic.io/overview/hello-world
 
 ## Before running
-- If needed, update credentials in infinitic.yml
-- run `gradle setupPulsar` (only once) to setup your Pulsar namespace
+If needed, update credentials in infinitic.yml
 
 ## Running services all together
 run `gradle run`
-gradle setupPulsar
+
 ## Launch
 Launch one workflow! `gradle startWorkflow  --args=Infinitic`
 
