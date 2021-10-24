@@ -1,6 +1,5 @@
 package hello.world;
 
-
 import io.infinitic.factory.InfiniticWorkerFactory;
 import io.infinitic.worker.InfiniticWorker;
 

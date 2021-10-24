@@ -7,16 +7,19 @@ import io.infinitic.factory.InfiniticClientFactory;
 
 public class Client {
     public static void main(String[] args) {
-        String name = args.length > 0 ? args[0] : "World";
-
         try(InfiniticClient client = InfiniticClientFactory.fromConfigFile("infinitic.yml")) {
             // create a stub from HelloWorld interface
             HelloWorld helloWorld = client.newWorkflow(HelloWorld.class);
 
-            // asynchronous dispatch of a workflow
-            Deferred<String> deferred = client.async(helloWorld, w -> w.greet(name));
+            int i = 0;
+            while (i < 100) {
+                // asynchronous dispatch of a workflow
+                Deferred<String> deferred = client.dispatch(helloWorld::greet, String.valueOf(i));
 
-            System.out.println("workflow " + HelloWorld.class.getName() + " " + deferred.getId() + " dispatched!");
+                System.out.println("workflow " + HelloWorld.class.getName() + " " + deferred.getId() + " dispatched!");
+
+                i++;
+            }
         }
     }
 }
