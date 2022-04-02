@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) throws IOException {
-        try(InfiniticWorker worker = InfiniticWorkerFactory.fromConfigFile("infinitic.yml")) {
+        try(InfiniticWorker worker = InfiniticWorkerFactory.fromConfigResource("/infinitic.yml")) {
             worker.start();
         }
     }

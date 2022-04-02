@@ -9,6 +9,7 @@ application {
 
 repositories {
     mavenCentral()
+    // Necessary for the dashboard
     maven { url = "https://jitpack.io" }
 }
 
@@ -16,14 +17,9 @@ dependencies {
     // add a logger
     implementation "org.slf4j:slf4j-simple:1.7.36"
     // infinitic framework
-    implementation "io.infinitic:infinitic-factory:0.9.0"
+    implementation "io.infinitic:infinitic-factory:0.9.3"
     // infinitic dashboard
-    implementation "io.infinitic:infinitic-dashboard:0.9.0"
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    implementation "io.infinitic:infinitic-dashboard:0.9.3"
 }
 
 task dispatch(type: JavaExec) {

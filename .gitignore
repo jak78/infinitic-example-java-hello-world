@@ -7,4 +7,5 @@ build
 # Ignore Logs
 *.log
 
+# Ignore Idea directory
 .idea
