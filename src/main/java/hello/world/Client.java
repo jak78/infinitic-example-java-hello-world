@@ -2,13 +2,12 @@ package hello.world;
 
 import hello.world.workflows.HelloWorld;
 import io.infinitic.clients.InfiniticClient;
-import io.infinitic.factory.InfiniticClientFactory;
 
 import java.io.IOException;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        try(InfiniticClient client = InfiniticClientFactory.fromConfigResource("/infinitic.yml")) {
+        try(InfiniticClient client = InfiniticClient.fromConfigResource("/infinitic.yml")) {
             // create a stub from HelloWorld interface
             HelloWorld helloWorld = client.newWorkflow(HelloWorld.class);
 
