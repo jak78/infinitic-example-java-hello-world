@@ -3,8 +3,9 @@ package hello.world.workflows;
 import hello.world.tasks.HelloWorldService;
 import io.infinitic.workflows.Workflow;
 
+@SuppressWarnings("unused")
 public class HelloWorldImpl extends Workflow implements HelloWorld {
-    private final HelloWorldService helloWorldService = newTask(HelloWorldService.class);
+    private final HelloWorldService helloWorldService = newService(HelloWorldService.class);
 
     @Override
     public String greet(String name) {

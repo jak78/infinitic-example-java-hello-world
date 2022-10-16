@@ -1,8 +1,7 @@
 package hello.world.tasks;
 
-import io.infinitic.tasks.Task;
-
-public class HelloWorldServiceImpl extends Task implements HelloWorldService {
+@SuppressWarnings("unused")
+public class HelloWorldServiceImpl implements HelloWorldService {
     @Override
     public String sayHello(String name) {
 

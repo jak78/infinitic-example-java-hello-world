@@ -19,14 +19,14 @@ storage:
     database: 0
 
 # Tasks
-tasks:
-  - name: HelloWorldService
+services:
+  - name: HelloService
     class: hello.world.tasks.HelloWorldServiceImpl
     concurrency: 10
 
 # Workflows
 workflows:
-  - name: HelloWorld
+  - name: HelloWorkflow
     class: hello.world.workflows.HelloWorldImpl
     concurrency: 10
 
