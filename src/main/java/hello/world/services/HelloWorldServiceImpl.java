@@ -1,6 +1,5 @@
-package hello.world.tasks;
+package hello.world.services;
 
-@SuppressWarnings("unused")
 public class HelloWorldServiceImpl implements HelloWorldService {
     @Override
     public String sayHello(String name) {
