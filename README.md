@@ -14,7 +14,7 @@ If needed, update credentials in infinitic.yml
 run `./gradlew run`
 
 ## Launch
-Launch one workflow! `./gradlew dispatch`
+Launch 10 workflows! `./gradlew dispatch` (see Client.java main function)
 
 ## Dashboard
 run `./gradlew dashboard` - server will run on port indicated in `infinitic.yml`
