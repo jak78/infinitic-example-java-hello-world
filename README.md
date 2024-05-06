@@ -11,10 +11,10 @@ This repository is described in the Infinitic documentation: https://docs.infini
 If needed, update credentials in infinitic.yml
 
 ## Running services all together
-run `gradle run`
+run `./gradlew run`
 
 ## Launch
-Launch one workflow! `gradle startWorkflow  --args=Infinitic`
+Launch one workflow! `./gradlew dispatch`
 
 ## Dashboard
-run `gradle dashboard` - server will run on port indicated in `infinitic.yml`
+run `./gradlew dashboard` - server will run on port indicated in `infinitic.yml`
